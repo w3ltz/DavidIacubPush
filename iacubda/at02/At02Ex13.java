@@ -7,13 +7,13 @@ public class At02Ex13 {
         double temperature = 0;
         String conversion;
 
-        Scanner entree = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Entrer une température : ");
-        temperature = entree.nextDouble();
-        entree.nextLine(); 
+        temperature = scanner.nextDouble();
+        scanner.nextLine(); 
         do{
             System.out.print("Vers (C/c)elsius ou vers (F/f)ahrenheit : ");
-            conversion = entree.nextLine();
+            conversion = scanner.nextLine();
         } while(conversion.toLowerCase().equals("f") == false && conversion.toLowerCase().equals("c") == false);
 
         System.out.println("Température : " +
@@ -26,6 +26,6 @@ public class At02Ex13 {
             + "°" + conversion.toUpperCase()
         );
 
-        entree.close();
+        scanner.close();
     }
 }
